@@ -2,6 +2,10 @@
 
 On this wiki you will find short articles and recipes describing various aspects of [oneM2M](https://onem2m.org).
 
+## Basics
+
+[What is a CSE?](basics/What-is-a-CSE.md)
+
 ## Further Information
 
 - oneM2M Specifications:
