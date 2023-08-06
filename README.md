@@ -11,3 +11,7 @@ On this wiki you will find short articles and recipes describing various aspects
 - oneM2M Specifications:
 - oneM2M YouTube Channel:
 - oneM2M @ StackOverflow: https://stackoverflow.com/tags/onem2m
+
+## License
+
+All articles and recipes are available under the [Creative Commons Attribution Share Alike 4.0 International](LICENSE).
