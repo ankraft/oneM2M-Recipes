@@ -8,7 +8,7 @@ A CSE, short for *Common Services Entity*, is a software component in a oneM2M-b
 
 As mentioned before a CSE usually contains a subset of all the available functions. This depends on the implementation and the deployment in a oneM2M infrastructure. 
 
-[[/images/oneM2M Deployment Infrastructure Example.png|]]
+![](../images/oneM2M Deployment Infrastructure Example.png)
 
 
 CSE's come as three different types:
