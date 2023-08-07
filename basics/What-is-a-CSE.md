@@ -2,7 +2,7 @@
 title:  What is a CSE?
 author: Andreas Kraft
 date: 2023-08-06
-tags: [ basics cse]
+tags: [ basics, cse]
 ---
 
 # What is a CSE?
