@@ -1,3 +1,10 @@
+---
+title: What is an AE?
+author: Andreas Kraft
+date: 2023-08-07
+tags: [ basics ae]
+---
+
 # What is an AE?
 
 An *Application Entity*, or *AE*, is a software component in a oneM2M-based IoT system that represents an *application* on an IoT device or a oneM2M node. An AE could be a simple sensor application on a constraint device, a complex IoT application doing data analytics that runs on a gateway or in the cloud, or even an application that mediates between different IoT systems. 
