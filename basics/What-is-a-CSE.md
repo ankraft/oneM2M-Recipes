@@ -1,3 +1,9 @@
+---
+title:  What is a CSE?
+author: Andreas Kraft
+date: 2023-08-07
+---
+
 # What is a CSE?
 
 A CSE, short for *Common Services Entity*, is a software component in a oneM2M-based IoT system that hosts one or many **Common Service Functions**, or *CSF*. Those functions represent the building blocks of an IoT system and include:
