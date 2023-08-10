@@ -118,7 +118,7 @@ After sending the request and receiving the response one should check the http s
 
 ### Complete Code
 
-The following is the complete runnable script. It is also available at [code/register.ae.py](code/register-ae.py).
+The following is the complete runnable script. It is also available at [code/register-ae.py](code/register-ae.py).
 
 ```python
 import requests
