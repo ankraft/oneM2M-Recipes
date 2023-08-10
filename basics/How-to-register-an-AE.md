@@ -21,7 +21,7 @@ We assume that a local CSE runs on the local machine and can receive requests at
 
 In the following sections we will explain the registration code step-by-step.
 
-### Importing Necessary Packages
+### Import Necessary Packages
 
 ```py
 import requests
@@ -29,7 +29,7 @@ import requests
 
 This makes the functions of the *request* package available to use.
 
-### Defining the CSE URL
+### Define the CSE URL
 
 ```python
 # The URL of the oneM2M CSE
@@ -88,7 +88,7 @@ This snippet defines the content of the oneM2M request. In our case it contains 
 
 [^1]: One may register application types with a global registration authority.
 
-### Sending the Request
+### Send the Request
 
 ```python
 # Send the request to the oneM2M CSE
@@ -99,7 +99,7 @@ This request in **line 2** sends the http request to the CSE, using the header f
 
 The response is assigned to the *response* variable.
 
-### Handling Response Statuses
+### Handle Response Statuses
 
 ```python
 # Check the response status code
