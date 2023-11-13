@@ -28,3 +28,6 @@ Example: `CseName/MyAeName/MyContainerName`
 An Application Entity (AE) might choose to use any of these formats to address resources in a oneM2M system. 
 
 Read more about addressing resources in a distributed CSE deployment and see more examples in [Resource Identifier Scopes and Formats](Resource-Identifier-Scopes-and-Formats.md).
+
+---
+<span style="color:grey">*by Andreas Kraft, 2023-08-08*</span>

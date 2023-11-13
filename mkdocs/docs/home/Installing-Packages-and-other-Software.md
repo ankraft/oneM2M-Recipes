@@ -2,7 +2,7 @@
 
 ## ACME CSE
 
-==TODO==
+<mark>TODO</mark>
 
 ## Python 3.x
 
@@ -18,3 +18,5 @@ It can be installed using the *pip* package manager:
 pip install requests
 ```
 
+---
+<span style="color:grey">*by Andreas Kraft, 2023-08-06*</span>

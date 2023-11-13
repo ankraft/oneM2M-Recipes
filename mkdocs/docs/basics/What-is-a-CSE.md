@@ -5,9 +5,9 @@ date: 2023-08-06
 tags: [ basics, cse]
 ---
 
-# What is a CSE?
+# What is a Common Service Entity?
 
-A CSE, short for *Common Services Entity*, is a software component in a oneM2M-based IoT system that hosts one or many **Common Service Functions**, or *CSF*. Those functions represent the building blocks of an IoT system and include:
+A **CSE**, short for *Common Services Entity*, is a software component in a oneM2M-based IoT system that hosts one or many *Common Service Functions*, or **CSF**. Those functions represent the building blocks of an IoT system and include:
 
 - storing of IoT data
 - enabling communication between IoT entities
@@ -32,3 +32,6 @@ CSE's come as three different types:
 - **Application Service Node CSE**, or *ASN-CSE*: This CSE is only located on the leaves of the oneM2M deployment tree and will have not further child nodes. They are usually installed on oneM2M-enabled devices which do have the requirement to provide some IoT services to the application(s) running on those devices. Usually, the number of services provided by these CSE's is more limited than those of a MN-CSE or IN-CSE.
 
 There is one further node type defined by oneM2M that doesn't host a CSE at all, which is the **Application Dedicated Node**, or *ADN*. An ADN can only connect and communicate with an MN-CSE or an IN-CSE.
+
+---
+<span style="color:grey">*by Andreas Kraft, 2023-08-06*</span>

@@ -1,6 +1,6 @@
 ---
 title:  How to start building a Scalable IoT solution?
-author: Bob Flynn
+authors: Bob Flynn
 date: 2023-08-07
 tags: [ basics ]
 ---
@@ -67,4 +67,5 @@ The rest of the Basic recipes will introduce the terminology and  concepts in **
 
 [^1]: Source: Bob Flynn
 
-
+---
+<span style="color:grey">*by Bob Flynn, 2023-08-07*</span>

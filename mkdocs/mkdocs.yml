@@ -1,0 +1,85 @@
+site_name: oneM2M Recipes
+
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  logo: 'images/onem2m.png'
+  favicon: 'images/favicon.ico'
+  palette:
+    scheme: oneM2M
+  features:
+    - content.code.annotate
+    - content.code.copy
+    #- navigation.footer
+    - navigation.indexes
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+
+plugins:
+  - tags:
+      tags_file: home/tags.md
+  - search
+
+markdown_extensions:
+  - footnotes
+  - tables
+  - def_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+     alternate_style: true
+
+##############################################################################
+
+# TODO: Add links to the ???
+extra:
+  social:
+    - icon: fontawesome/brands/gitlab
+      link: https://git.oneM2M.org
+      name: oneM2M GitLab
+    - icon: fontawesome/brands/github 
+      link: https://github.com/onem2m
+      name: oneM2M @ GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/onem2m/
+      name: oneM2M @ LinkedIn
+
+nav:
+  - Home: 
+    - 'index.md'
+    - Installing Packages and other Software: 'home/Installing-Packages-and-other-Software.md'
+    - Tags: 'home/tags.md'
+  - Basics: 
+    - 'basics/index.md'
+    - What is a Common Service Entity?: 'basics/What-is-a-CSE.md'
+    - What is an Application Entity?: 'basics/What-is-an-AE.md'
+    - Resource Identifiers:
+      - Structured and Unstructured Resource Identifiers: 'basics/What-are-Structured-and-Unstructured-Resource-Addresses.md'
+      - Scopes and Formats: 'basics/Resource-Identifier-Scopes-and-Formats.md'
+    - Request and Responses:
+      - Mapping oneM2M Requests and Responses to HTTP: 'basics/Mapping-oneM2M-Requests-and-Responses-to-HTTP.md'
+  - Recipes:
+    - How to register an Application Entity: 'recipes/How-to-register-an-AE.md'
+  - Links: 
+    - 'links/index.md'
+  - About: 
+    - 'about/index.md'
+    - LICENSE: 'about/LICENSE.md'
+
+
+

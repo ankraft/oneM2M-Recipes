@@ -1,0 +1,10 @@
+.md-grid {
+  // max-width: initial;
+  //max-width: 1024px;
+}
+[data-md-color-scheme="oneM2M"] {
+  --md-primary-fg-color:        #b42025;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #90030C;
+  --md-typeset-a-color:         #b42025;
+}

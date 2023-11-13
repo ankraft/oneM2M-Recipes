@@ -2,7 +2,9 @@
 title:  Resource Identifier Scopes and Formats
 author: Andreas Kraft
 date: 2023-08-08
-tags: [ basics, addressing]
+tags:
+  - basics
+  - addressing
 ---
 # Resource Identifier Scopes and Formats
 
@@ -10,7 +12,9 @@ Resource identifiers in oneM2M are used to identify and to point to resources. T
 
 [^1]: See [RFC3986](https://tools.ietf.org/html/rfc3986#section-2.3) for the definition of *unreserved* characters.
 
-The scope can be:
+## Resource Identifier Scopes
+
+The possible scope for a resource identifier is one of the following:
 
 - **CSE-relative** : The resource identifier targets a resource that resides on the same CSE that is being targeted by a request or another resource.  
 In that case the CSE-relative format of a resource identifier can be used to address the resource.
@@ -21,6 +25,8 @@ In that case the absolute format of a resource identifier shall be used to addre
 
 A single resource may be identified by all of the above resource identifier formats depending on the method and scopes that are summarized in the following table. There are two different methods for identifying a resource within the oneM2M resource structure with three different variants each depending on the scope of the request to access the resource. 
 
+
+## How do Resource Identifiers look like
 
 The ways how the resource identifiers are constructed in each case shall follow:
 
@@ -38,21 +44,52 @@ See also [What are Structured and Unstructured Resource Addresses?](What-are-Str
 
 The following examples show the different addressing methods for resources and CSE bases. Also, examples for the mapping to http URIs are given.
 
-| Method | CSE-relative Scope | SP-relative Scope | Absolute Scope |
-| ------ | ------------ | ----------- | -------- |
-| **Unstructured ID** | MyResourceId<br />CseResourceId | /CseId/MyResourceId<br />/CseId/CseResourceId | //SpID/CseId/MyResourceId<br />//SpID/CseId/CseResourceId |
-| **Unstructured http** | http://ipAddress:port/MyResourceId<br />http://ipAddress:port/CseResourceId | http://ipAddress:port/~/CseId/MyResourceId<br />http://ipAddress:port/~/CseId/CseResourceId | http://ipAddress:port/_/SpID/CseId/MyResourceId<br />http://ipAddress:port/_/SpID/CseId/MyResourceId |
-| **Structured ID** | CseName/MyAeName/MyResourceName<br />CseName | /CseId/CseName/MyAeName/MyResourceName<br />/CseId/CseName | //SpID/CseId/CseName/MyAeName/MyResourceName<br />//SpID/CseId/CseName |
-| **Structured http** | http://ipAddress:port/CseName/MyAeName/MyResourceName<br />http://ipAddress:port/CseName | http://ipAddress:port/~/CseId/CseName/MyAeName/MyResourceName<br />http://ipAddress:port/~/CseId/CseName | http://ipAddress:port/_/SpID/CseId/CseName/MyAeName/MyResourceName<br />http://ipAddress:port/_/SpID/CseId/CseName |
-| **Hybrid ID** | MyResourceId/MyVirtualResourceName<br />CseresourceId/MyVirtualResourceName | /CseId/MyResourceI/MyVirtualResourceNamebr />/CseId/CseResourceId/MyVirtualResourceName | //SpID/CseId/MyResourceId/MyVirtualResourceName<br />//SpID/CseId/CseResourceId/MyVirtualResourceName |
-| **Hybrid http** | http://ipAddress:port/MyResourceId/MyVirtualResourceName<br />http://ipAddress:port/CseResourceId/MyVirtualResourceName | http://ipAddress:port/~/CseId/MyResourceId/MyVirtualResourceName<br />http://ipAddress:port/~/CseId/CseResourceId/MyVirtualResourceName | http://ipAddress:port/_/SpID/CseId/MyResourceId/MyVirtualResourceName<br />http://ipAddress:port/_/SpID/CseId/MyResourceId/MyVirtualResourceName |
+=== "CSE-relative"
 
 
-Note: A *structured path* is constructed out of the individual resourceNames of the resources that form the path. It always includes the resourceName of the CSE.
+	| Method | Examples |
+	| ------ | ------------------- |
+	| **Unstructured ID** | MyResourceID<br />CSEResourceID|
+	| **Unstructured http** | http://ipAddress:port/MyResourceID<br />http://ipAddress:port/CSEResourceID| 
+	| **Structured ID** | CSEName/MyAEName/MyResourceName<br />CSEName | 
+	| **Structured http** | http://ipAddress:port/CSEName/MyAEName/MyResourceName<br />http://ipAddress:port/CSEName | 
+	| **Hybrid ID** | MyResourceID/MyVirtualResourceName<br />CSEresourceID/MyVirtualResourceName | 
+	| **Hybrid http** | http://ipAddress:port/MyResourceID/MyVirtualResourceName<br />http://ipAddress:port/CSEResourceID/MyVirtualResourceName | 
 
-Note: A *hybrid resource address* always consists of the unstructured resource ID **plus** the resourceName of a virtual resource, for example `cnt1234/la`. This is used to address, for example, the "latest" virtual resource of a container, using an unstructured address to access the container.
+=== "SP-relative"
 
-Note: The following sequences map between special characters in the resource identifier and the http URI:
+	| Method | Examples | 
+	| ------ | ----------- | 
+	| **Unstructured ID** | /CSEID/MyResourceID<br />/CSEID/CSEResourceID| 
+	| **Unstructured http** |  http://ipAddress:port/~/CSEID/MyResourceID<br />http://ipAddress:port/~/CSEID/CSEResourceID| 
+	| **Structured ID** |  /CSEID/CSEName/MyAEName/MyResourceName<br />/CSEID/CSEName | 
+	| **Structured http** |  http://ipAddress:port/~/CSEID/CSEName/MyAEName/MyResourceName<br />http://ipAddress:port/~/CSEID/CSEName | 
+	| **Hybrid ID** |  /CSEID/MyResourceI/MyVirtualResourceNamebr<br />/CSEID/CSEResourceID/MyVirtualResourceName | 
+	| **Hybrid http** |  http://ipAddress:port/~/CSEID/MyResourceID/MyVirtualResourceName<br />http://ipAddress:port/~/CSEID/CSEResourceID/MyVirtualResourceName | 
+
+=== "Absolute"
+
+	| Method |  Examples |
+	| ------ |  -------- |
+	| **Unstructured ID** |  //SPID/CSEID/MyResourceID<br />//SPID/CSEID/CSEResourceID|
+	| **Unstructured http** | http://ipAddress:port/\_/SPID/CSEID/MyResourceID<br />http://ipAddress:port/\_/SPID/CSEID/MyResourceID |
+	| **Structured ID** |  //SPID/CSEID/CSEName/MyAEName/MyResourceName<br />//SPID/CSEID/CSEName |
+	| **Structured http** |  http://ipAddress:port/\_/SPID/CSEID/CSEName/MyAEName/MyResourceName<br />http://ipAddress:port/\_/SPID/CSEID/CSEName |
+	| **Hybrid ID** |  //SPID/CSEID/MyResourceID/MyVirtualResourceName<br />//SPID/CSEID/CSEResourceID/MyVirtualResourceName |
+	| **Hybrid http** |  http://ipAddress:port/\_/SPID/CSEID/MyResourceID/MyVirtualResourceName<br />http://ipAddress:port/\_/SPID/CSEID/MyResourceID/MyVirtualResourceName |
+
+
+> **Notes**
+>
+> - A *structured path* is constructed out of the individual resourceNames of the resources that form the path. It always includes the resourceName of the CSE.
+> - A *hybrid resource address* always consists of the unstructured resource ID **plus** the resourceName of a virtual resource, for example `cnt1234/la`. This is used to address, for example, the "latest" virtual resource of a container, using an unstructured address to access the container.
+> - The following sequences map between special characters in the resource identifier and the http URI:
+
+<mark>TODO: mapping to http</mark>
 
 - `//` &lt; - > `/~/`
 - `///` &lt; - > `/_/`
+
+---
+<span style="color:grey">*by Andreas Kraft, 2023-08-08*</span>
+
