@@ -7,7 +7,7 @@ tags: [ basics ]
 
 # Where Do I Start?
 
-Developing an IoT solution can easily become an overwhelming task. This is especially true for IoT solutions that consist of many stakeholders and requirements. Some of these considerations are described in this presentation  -> Link to ETSI presentation.
+Developing an IoT solution can easily become an overwhelming task. This is especially true for IoT solutions that consist of many stakeholders and requirements. Some of these considerations are described in this presentation  -> [Scalable IoT Deployment](https://docbox.etsi.org/Workshop/2023/07_ETSIIoTCONFERENCE/S06_oneM2M/ROADMAP_SCALABLE_DEPLOYMENT_EXACTA_FLYNN.pdf).
 
 These short recipes are going to describe how to implement a scalable IoT solution using the **oneM2M** standard. But before considerations related to **oneM2M** are taken into account you should first have an understanding of what your solution needs. 
 
