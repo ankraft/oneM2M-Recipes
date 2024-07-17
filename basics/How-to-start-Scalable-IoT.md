@@ -55,7 +55,7 @@ The key message that is relevant to a solution based on **oneM2M** is that whate
 
 # What Makes this Scalable?
 
-At this point in the design, using a simple scenario of controlling one smart light bulb, it is difficult the demonstrate the benefit of one IoT platform versus any other IoT platform. However, as you progress through some of the other recipes you will see that you are able to add new features and capabilities to your applications without changing the device implementations. This is really important in scenarios where you have many device deployed and you want to offer smarter or more efficient services to your customers. It also allows us to leverage existing devices to create more sharing of data, more innovative applications and services, and more sustainable deployments.
+At this point in the design, using a simple scenario of controlling one smart light bulb, it is difficult the demonstrate the benefit of one IoT platform versus any other IoT platform. However, as you progress through some of the other recipes you will see that you are able to add new features and capabilities to your applications without changing the device implementations. This is really important in scenarios where you have many devices deployed and you want to offer smarter or more efficient services to your customers. It also allows us to leverage existing devices to create more sharing of data, more innovative applications and services, and more sustainable deployments.
 
 ![Sample Smart Light callflow](images/lightbulb_sample_callflow.png)
 
